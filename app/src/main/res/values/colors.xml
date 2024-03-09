@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="grey">#4A4949</color>
+    <color name="white">#F3E5F5</color>r̥
+    <color name="contrast">#F5D3FA</color>
+    <color name="lowSaturationRed">#FFCDD2</color>
+    <color name="lowSaturationGreen">#C8E6C9</color>
+    <color name="lowSaturationBlue">#D1C4E9</color>
+    <color name="lowSaturationYellow">#FFECB3</color>
+    <color name="lowSaturationCyan">#FFCCBC</color>
+</resources>

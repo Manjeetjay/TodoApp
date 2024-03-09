@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TodoEditFragment">
+
+    <TextView
+        android:id="@+id/id_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/contrast"
+        android:padding="16dp"
+        android:textSize="34sp"
+        android:text="@string/edit_task"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tv_edit_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edit_checkbox_is_completed"
+        app:layout_constraintTop_toBottomOf="@+id/id_header">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:hint="@string/title" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tv_edit_description"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_edit_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|start"
+            android:hint="@string/description"
+            android:maxLines="10" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <CheckBox
+        android:id="@+id/edit_checkbox_is_completed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_edit_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_edit_title"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/edit_task"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/edit_task"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_date_picker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/dd_mm_yyyy"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_edit_description" />
+
+    <Spinner
+        android:padding="5dp"
+        android:scrollbarSize="50dp"
+        android:id="@+id/edit_category_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:text="@string/category"
+        app:layout_constraintBottom_toTopOf="@+id/edit_date_picker"
+        app:layout_constraintStart_toStartOf="@+id/tv_edit_description"
+        app:layout_constraintTop_toBottomOf="@+id/tv_edit_description" />
+
+    <Spinner
+        android:id="@+id/edit_priority_spinner"
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:scrollbarSize="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/priority"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_category_spinner"
+        app:layout_constraintEnd_toEndOf="@+id/tv_edit_description"
+        app:layout_constraintStart_toEndOf="@+id/edit_category_spinner"
+        app:layout_constraintTop_toTopOf="@+id/edit_category_spinner" />
+</androidx.constraintlayout.widget.ConstraintLayout>
